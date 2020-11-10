@@ -1,6 +1,7 @@
 version: "3.8"
 services:
-  genesys-mysql:
+  genesysmysql:
+    container_name: genesysmysql
     image: "mysql"
     restart: always
     environment:
@@ -13,6 +14,8 @@ services:
   genesys:
     build: .
     ports:
-      - "8080:8080"
+      - 8080:8080
     depends_on:
-      - genesys-mysql
+      - genesysmysql
+    environment:
+      - spring.datasource.url=jdbc:genesysmysql://db_example:3306?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
