@@ -1,0 +1,13 @@
+{
+	"app": "GeneSys",
+	"id": "892d8486-5051-45da-ad84-86505105daa9",
+	"@timestamp": "2020-11-02T21:28:04.590Z",
+	"@version": "1",
+	"logger": "org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]",
+	"level": "INFO",
+	"thread": "http-nio-8080-exec-2",
+	"message": "Initializing Spring DispatcherServlet 'dispatcherServlet'",
+	"method": "log",
+	"class": "org.apache.juli.logging.DirectJDKLog"
+}
+
