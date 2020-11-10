@@ -1,0 +1,18 @@
+version: "3.8"
+services:
+  genesys-mysql:
+    image: "mysql"
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=db_example
+      - MYSQL_USER=springuser
+      - MYSQL_PASSWORD=ThePassword
+    ports:
+      - 3306:3306
+  genesys:
+    build: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      - genesys-mysql
