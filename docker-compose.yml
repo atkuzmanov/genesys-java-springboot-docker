@@ -1,8 +1,9 @@
 version: "3.8"
 services:
   genesysmysql:
-    container_name: genesysmysql_container
-    image: "mysql"
+#    container_name: genesysmysql
+#    container_name: genesysmysql_container
+    image: "mysql:8.0.21"
     restart: always
     environment:
       - MYSQL_ROOT_PASSWORD=root
@@ -11,6 +12,10 @@ services:
       - MYSQL_PASSWORD=ThePassword
     ports:
       - 3306:3306
+    volumes:
+      - ./setup.sql:/docker-entrypoint-initdb.d/setup.sql:ro
+#      - db_data:/var/lib/mysql
+#      - db_data:/docker-entrypoint-initdb.d
   genesys:
     build: .
     ports:
@@ -20,8 +25,13 @@ services:
     environment:
       - spring.datasource.jdbc-url=jdbc:genesysmysql://db_example:3306?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC&autoReconnect=true
       - spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
-      - spring.jpa.hibernate.ddl-auto=create-drop
-      - spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL5Dialect
-      - spring.data.jpa.repositories.enabled=true
-      - spring.jpa.database-platform=org.hibernate.dialect.MySQL5Dialect
-      - spring.jpa.generate-ddl=true
+#      - spring.datasource.username=root
+#      - spring.datasource.password=root
+#      - spring.jpa.hibernate.ddl-auto=create-drop
+#      - spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL5Dialect
+#      - spring.data.jpa.repositories.enabled=true
+#      - spring.jpa.database-platform=org.hibernate.dialect.MySQL5Dialect
+#      - spring.jpa.generate-ddl=true
+#volumes:
+#  db_data:
+#    external: true

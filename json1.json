@@ -1,0 +1,78 @@
+{
+  "app": "GeneSys",
+  "logMsgId": "4706ab38-5b17-428e-86ab-385b17d28e10",
+  "@timestamp": "2020-11-11T09:18:44.509Z",
+  "@version": "1",
+  "logger": "com.zaxxer.hikari.pool.HikariPool",
+  "level": "ERROR",
+  "thread": "task-1",
+  "stackTrace": "com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+\tat com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+\tat com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+\tat com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836)
+\tat com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456)
+\tat com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246)
+\tat com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:197)
+\tat com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+\tat com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:358)
+\tat com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+\tat com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:477)
+\tat com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:560)
+\tat com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+\tat com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+\tat org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+\tat org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180)
+\tat org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+\tat org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+\tat org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101)
+\tat org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+\tat org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+\tat org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+\tat org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152)
+\tat org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
+\tat org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
+\tat org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+\tat org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176)
+\tat org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:118)
+\tat org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224)
+\tat org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255)
+\tat org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+\tat org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+\tat org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:391)
+\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+\tat java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+\tat com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+\tat com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+\tat com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+\tat com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+\tat com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:91)
+\tat com.mysql.cj.NativeSession.connect(NativeSession.java:144)
+\tat com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:956)
+\tat com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:826)
+\t... 33 common frames omitted
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+\tat java.base/java.net.PlainSocketImpl.socketConnect(Native Method)
+\tat java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
+\tat java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
+\tat java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
+\tat java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:403)
+\tat java.base/java.net.Socket.connect(Socket.java:609)
+\tat com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155)
+\tat com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:65)
+\t... 36 common frames omitted
+",
+  "message": "HikariPool-1 - Exception during pool initialization.",
+  "method": "throwPoolInitializationException",
+  "class": "com.zaxxer.hikari.pool.HikariPool"
+}
