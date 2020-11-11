@@ -39,8 +39,6 @@ OS name: "mac os x", version: "10.14.6", arch: "x86_64", family: "mac"
 ***Here is the whole codebase: [Codebase][1]***
 
 
-  [1]: https://github.com/atkuzmanov/genesys-java-springboot-docker
-
 My docker-compose.yml (The commented out stuff is things I tried):
 ```yaml
 version: "3.8"
@@ -178,15 +176,16 @@ spring.thymeleaf.cache=false
 Here are the exception messages:
 
 - Exception 1:
-
+[Exception 1][2]
 
 - Eception 2:
-
+[Exception 2][3]
 
 - Exception 3:
-
+[Exception 3][4]
 
 - Exception 4, which encapsulates all of them:
+[Exception 4][5]
 ```json
 {
   "app": "GeneSys",
@@ -324,3 +323,10 @@ Caused by: java.net.ConnectException: Connection refused (Connection refused)
   "class": "org.springframework.boot.SpringApplication"
 }
 ```
+
+
+  [1]: https://github.com/atkuzmanov/genesys-java-springboot-docker
+  [2]: https://github.com/atkuzmanov/genesys-java-springboot-docker/blob/main/src/main/java/com/atkuzmanov/genesys/temporarytodelete/json1.json
+  [3]: https://github.com/atkuzmanov/genesys-java-springboot-docker/blob/main/src/main/java/com/atkuzmanov/genesys/temporarytodelete/json2.json
+  [4]: https://github.com/atkuzmanov/genesys-java-springboot-docker/blob/main/src/main/java/com/atkuzmanov/genesys/temporarytodelete/json3.json
+  [5]: https://github.com/atkuzmanov/genesys-java-springboot-docker/blob/main/src/main/java/com/atkuzmanov/genesys/temporarytodelete/json4.json
