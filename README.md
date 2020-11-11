@@ -6,6 +6,23 @@
 
 ---
 
+## Table of contents
+
+<!-- TOC -->
+
+- [GeneSys](#genesys)
+  - [Description](#description)
+  - [SETUP](#setup)
+  - [TODOs, WIP & FUTURE DEVELOPMENT](#todos-wip--future-development)
+  - [NOTES](#notes)
+  - [LICENSE](#license)
+  - [CONSTRUCTIVE FEEDBACK AND CONTRIBUTIONS TO THE PROJECT ARE WELCOME](#constructive-feedback-and-contributions-to-the-project-are-welcome)
+- [REFERENCES](#references)
+
+<!-- /TOC -->
+
+---
+
 ## Description
 
 This is a project to be used as a `base` or a `cookie cutter` if you will.
@@ -109,6 +126,18 @@ mvn clean install
 ## NOTES
 
 [APPENDIX A](APPENDIX_A.md)
+
+---
+
+## LICENSE
+
+[GPL-3.0 License](LICENSE.md)
+
+---
+
+## CONSTRUCTIVE FEEDBACK AND CONTRIBUTIONS TO THE PROJECT ARE WELCOME
+
+[Contact](https://github.com/atkuzmanov)
 
 ---
 
