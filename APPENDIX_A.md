@@ -257,4 +257,8 @@ RE: spring.jpa.open-in-view Warning
 
 - <https://www.oodesign.com/>
 
+### Docker & Docker-compose
+
+- <https://stackoverflow.com/questions/64786024/the-dreaded-java-springboot-app-not-connecting-to-mysql-with-docker-compose-java/64786929#64786929>
+
 ---

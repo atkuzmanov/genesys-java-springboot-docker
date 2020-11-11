@@ -2,8 +2,7 @@
 
 ![GeneSys Logo v1.3](src/main/resources/logos/GeneSys_Logo_v1.3%20Big%20Dark.png)
 
-**```"Genesis + System = GeneSys"```**   
-\- atkuzmanov
+**```"Genesis + System = GeneSys"```** - atkuzmanov
 
 ---
 
@@ -53,6 +52,8 @@ The project comes pre-configured incorporating the following technologies:
 - [Apache Tomcat](http://tomcat.apache.org/)
 - [Design Patterns](https://www.oodesign.com/)
     - [Builder Design Pattern](https://www.oodesign.com/builder-pattern.html)
+- [Docker](https://www.docker.com/)
+    - [Docker-compose](https://docs.docker.com/compose/)
 
 **Note:** For the relevant versions, please see the [POM file](pom.xml).
 
@@ -68,15 +69,20 @@ mvn -N io.takari:maven:wrapper
 
 - Building
 
-```
+```sh
 mvn clean install
 ```
 
 - Running
-
-```
-mvn spring-boot:run
-```
+    - Maven
+    ```sh
+    mvn spring-boot:run
+    ```
+    
+    - Docker & Docker-Compose
+    ```sh
+    docker-compose up --build --remove-orphans
+    ```
 
 ---
 
