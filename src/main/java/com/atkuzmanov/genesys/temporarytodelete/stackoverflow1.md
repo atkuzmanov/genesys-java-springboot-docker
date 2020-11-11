@@ -19,6 +19,8 @@ You sir, are absolutely correct, this fixed it, thank you ever so much! I guess 
 1
 
 @atkuzmanov try to look here https://stackoverflow.com/questions/55559386/how-to-fix-mbind-operation-not-permitted-in-mysql-error-log – Naitonium 1 min ago
+
+cap_add: - SYS_NICE  # CAP_SYS_NICE did the trick, thank you again!! ( : – atkuzmanov just now   Edit   
 ```
 
 ---
