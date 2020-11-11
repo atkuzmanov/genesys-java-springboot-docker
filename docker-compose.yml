@@ -1,7 +1,7 @@
 version: "3.8"
 services:
   genesysmysql:
-    container_name: genesysmysql
+    container_name: genesysmysql_container
     image: "mysql"
     restart: always
     environment:
@@ -18,4 +18,10 @@ services:
     depends_on:
       - genesysmysql
     environment:
-      - spring.datasource.url=jdbc:genesysmysql://db_example:3306?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+      - spring.datasource.jdbc-url=jdbc:genesysmysql://db_example:3306?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC&autoReconnect=true
+      - spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+      - spring.jpa.hibernate.ddl-auto=create-drop
+      - spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL5Dialect
+      - spring.data.jpa.repositories.enabled=true
+      - spring.jpa.database-platform=org.hibernate.dialect.MySQL5Dialect
+      - spring.jpa.generate-ddl=true
