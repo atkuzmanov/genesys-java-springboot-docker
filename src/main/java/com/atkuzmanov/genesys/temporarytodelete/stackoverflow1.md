@@ -1,3 +1,27 @@
+<https://stackoverflow.com/questions/64786024/the-dreaded-java-springboot-app-not-connecting-to-mysql-with-docker-compose-java>
+
+---
+
+```
+1 Answer
+
+1
+
+
+To fix it you just need to change parameter spring.datasource.jdbc-url to spring.datasource.url and connection string to jdbc:mysql://genesysmysql:3306/db_example?useSSL=false&allowPublicKeyRetrieval=true&autoReconnect=true. Your connection string has an error.
+
+share  edit  follow  flag 
+answered 22 mins ago
+
+Naitonium
+4511 silver badge55 bronze badges
+You sir, are absolutely correct, this fixed it, thank you ever so much! I guess I was looking at it for so long, I missed it. Now the only message which I am getting is genesysmysql    | mbind: Operation not permitted when the app starts up, any idea why? – atkuzmanov 4 mins ago    Edit   
+1
+
+@atkuzmanov try to look here https://stackoverflow.com/questions/55559386/how-to-fix-mbind-operation-not-permitted-in-mysql-error-log – Naitonium 1 min ago
+```
+
+---
 
 The dreaded Java SpringBoot app not connecting to MySQL with Docker-compose java.net.ConnectException: Connection refused
 
