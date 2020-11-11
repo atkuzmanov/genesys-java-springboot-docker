@@ -27,9 +27,9 @@
 
 This is a project to be used as a `base` or a `cookie cutter` if you will.
 
-This version of the project is for building a Java Spring Boot Web and REST applications from scratch.
+This version of the project is for building `Java`, `Spring Boot` `Web` and `REST` applications from scratch.
 
-The project comes pre-configured incorporating the following technologies:
+The project comes incorporating or pre-configured to be compatible with the following technologies:
 
 - [Java](https://www.java.com/en/)
 - [Spring](https://spring.io/)
